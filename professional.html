@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Professionnel - Doctomatique</title>
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/professional.css">
+</head>
+<body>
+
+    <!-- ========== EN-TÊTE DE LA PAGE ========== -->
+    <header>
+        <nav>
+            <!-- Logo principal avec lien vers l'accueil -->
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="Logo Doctomatique">
+                <span>Doctomatique</span>
+            </a>
+            
+            <!-- Navigation principale -->
+            <div class="nav-links">
+                <a href="../index.html">Espace Patient</a>
+                <a href="auth.html" class="btn-connexion">Déconnexion</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========== LAYOUT PRINCIPAL ========== -->
+    <div class="pro-layout">
+        
+        <!-- ========== SIDEBAR NAVIGATION ========== -->
+        <aside class="pro-sidebar">
+            <div class="pro-sidebar-header">
+                <h2 id="proNom">Dr. Sophie Martin</h2>
+                <p id="proSpecialite">Médecin généraliste</p>
+            </div>
+            
+            <nav class="pro-nav">
+                <a href="#" class="pro-nav-item active" data-section="dashboard">
+                    <span class="pro-nav-icon">📊</span>
+                    <span>Tableau de bord</span>
+                </a>
+                <a href="#" class="pro-nav-item" data-section="agenda">
+                    <span class="pro-nav-icon">📅</span>
+                    <span>Agenda</span>
+                </a>
+                <a href="#" class="pro-nav-item" data-section="rendez-vous">
+                    <span class="pro-nav-icon">📋</span>
+                    <span>Rendez-vous</span>
+                </a>
+                <a href="#" class="pro-nav-item" data-section="patients">
+                    <span class="pro-nav-icon">👥</span>
+                    <span>Patients</span>
+                </a>
+                <a href="#" class="pro-nav-item" data-section="disponibilites">
+                    <span class="pro-nav-icon">⏰</span>
+                    <span>Disponibilités</span>
+                </a>
+                <a href="#" class="pro-nav-item" data-section="parametres">
+                    <span class="pro-nav-icon">⚙️</span>
+                    <span>Paramètres</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- ========== CONTENU PRINCIPAL ========== -->
+        <main class="pro-main">
+            
+            <!-- ========== SECTION DASHBOARD ========== -->
+            <section id="section-dashboard" class="pro-section active">
+                <div class="section-header">
+                    <h1>Tableau de bord</h1>
+                    <div class="section-actions">
+                        <button class="btn-secondary">📊 Voir les statistiques</button>
+                        <button class="btn-submit">➕ Nouveau rendez-vous</button>
+                    </div>
+                </div>
+
+                <!-- Cartes statistiques -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <span class="stat-card-title">Rendez-vous aujourd'hui</span>
+                            <div class="stat-card-icon">
+                                <img src="../assets/images/icone-calendar.png" alt="Calendrier">
+                            </div>
+                        </div>
+                        <div class="stat-card-value" id="statRdvJour">6</div>
+                        <div class="stat-card-subtitle">Sur 8 créneaux disponibles</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <span class="stat-card-title">RDV confirmés</span>
+                            <div class="stat-card-icon">
+                                <img src="../assets/images/icone-check.png" alt="Confirmé">
+                            </div>
+                        </div>
+                        <div class="stat-card-value" id="statRdvConfirmes">8</div>
+                        <div class="stat-card-trend positive">↑ +2 cette semaine</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <span class="stat-card-title">En attente</span>
+                            <div class="stat-card-icon">
+                                <img src="../assets/images/icone-clock.png" alt="En attente">
+                            </div>
+                        </div>
+                        <div class="stat-card-value" id="statRdvEnAttente">2</div>
+                        <div class="stat-card-subtitle">Nécessitent confirmation</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <span class="stat-card-title">Patients</span>
+                            <div class="stat-card-icon">
+                                <img src="../assets/images/icone-personne.png" alt="Patients">
+                            </div>
+                        </div>
+                        <div class="stat-card-value" id="statPatients">127</div>
+                        <div class="stat-card-trend positive">↑ +3 ce mois</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <span class="stat-card-title">Taux de remplissage</span>
+                            <div class="stat-card-icon">
+                                <img src="../assets/images/icone-stats.png" alt="Stats">
+                            </div>
+                        </div>
+                        <div class="stat-card-value" id="statTauxRemplissage">85%</div>
+                        <div class="stat-card-trend positive">↑ +5% vs mois dernier</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-header">
+                            <span class="stat-card-title">Revenus estimés</span>
+                            <div class="stat-card-icon">
+                                <img src="../assets/images/icone-money.png" alt="Revenus">
+                            </div>
+                        </div>
+                        <div class="stat-card-value" id="statRevenus">2 450 €</div>
+                        <div class="stat-card-subtitle">Ce mois</div>
+                    </div>
+                </div>
+
+                <!-- Prochains rendez-vous -->
+                <div class="appointments-list" style="margin-top: 2rem;">
+                    <div style="padding: 1.5rem; border-bottom: 1px solid var(--couleur-bordure);">
+                        <h3>Prochains rendez-vous</h3>
+                    </div>
+                    <div id="prochainsRdv" style="padding: 1.5rem;">
+                        <!-- Généré par JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== SECTION AGENDA ========== -->
+            <section id="section-agenda" class="pro-section">
+                <div class="section-header">
+                    <h1>Agenda</h1>
+                    <div class="section-actions">
+                        <button class="btn-secondary">📥 Exporter</button>
+                        <button class="btn-submit">➕ Nouveau rendez-vous</button>
+                    </div>
+                </div>
+
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <div class="calendar-nav">
+                            <button id="prevWeek">←</button>
+                            <button id="todayBtn">Aujourd'hui</button>
+                            <button id="nextWeek">→</button>
+                            <h2 id="calendarTitle" class="calendar-title">Décembre 2025</h2>
+                        </div>
+                        <div class="calendar-views">
+                            <button class="view-btn" data-view="day">Jour</button>
+                            <button class="view-btn active" data-view="week">Semaine</button>
+                            <button class="view-btn" data-view="month">Mois</button>
+                        </div>
+                    </div>
+                    <div class="calendar-grid" id="calendarGrid">
+                        <!-- Généré par JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== SECTION RENDEZ-VOUS ========== -->
+            <section id="section-rendez-vous" class="pro-section">
+                <div class="section-header">
+                    <h1>Rendez-vous</h1>
+                    <div class="section-actions">
+                        <button class="btn-secondary">📥 Exporter</button>
+                        <button class="btn-submit">➕ Nouveau rendez-vous</button>
+                    </div>
+                </div>
+
+                <div class="appointments-list">
+                    <div class="appointments-filters">
+                        <div class="filter-group-inline">
+                            <div class="filter-chip active" data-status="tous">Tous</div>
+                            <div class="filter-chip" data-status="confirmed">Confirmés</div>
+                            <div class="filter-chip" data-status="pending">En attente</div>
+                            <div class="filter-chip" data-status="cancelled">Annulés</div>
+                            <div class="filter-chip" data-status="completed">Terminés</div>
+                        </div>
+                    </div>
+
+                    <table class="appointments-table" id="appointmentsTable">
+                        <thead>
+                            <tr>
+                                <th>Patient</th>
+                                <th>Date & Heure</th>
+                                <th>Type</th>
+                                <th>Motif</th>
+                                <th>Statut</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Généré par JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ========== SECTION PATIENTS ========== -->
+            <section id="section-patients" class="pro-section">
+                <div class="section-header">
+                    <h1>Mes patients</h1>
+                    <div class="section-actions">
+                        <input type="text" placeholder="🔍 Rechercher un patient..." style="padding: 0.8rem; border: 1px solid var(--couleur-bordure); border-radius: var(--rayon-bordure-petit);">
+                        <button class="btn-submit">➕ Nouveau patient</button>
+                    </div>
+                </div>
+
+                <div class="patients-grid" id="patientsList">
+                    <!-- Généré par JS -->
+                </div>
+            </section>
+
+            <!-- ========== SECTION DISPONIBILITÉS ========== -->
+            <section id="section-disponibilites" class="pro-section">
+                <div class="section-header">
+                    <h1>Disponibilités</h1>
+                    <div class="section-actions">
+                        <button class="btn-submit">💾 Enregistrer</button>
+                    </div>
+                </div>
+
+                <div class="availability-grid" id="disponibilitesGrid">
+                    <!-- Généré par JS -->
+                </div>
+            </section>
+
+            <!-- ========== SECTION PARAMÈTRES ========== -->
+            <section id="section-parametres" class="pro-section">
+                <div class="section-header">
+                    <h1>Paramètres</h1>
+                </div>
+
+                <div class="settings-grid" id="parametresContent">
+                    <!-- Généré par JS -->
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ========== PIED DE PAGE ========== -->
+    <footer>
+        <div class="footer-content">
+            <!-- Section À propos -->
+            <div class="footer-section">
+                <h3>Doctomatique</h3>
+                <p>La plateforme de santé qui simplifie votre quotidien</p>
+            </div>
+            
+            <!-- Section Professionnels -->
+            <div class="footer-section">
+                <h4>Professionnels</h4>
+                <a href="#">Documentation</a>
+                <a href="#">Support technique</a>
+                <a href="#">Formations</a>
+            </div>
+            
+            <!-- Section Aide -->
+            <div class="footer-section">
+                <h4>Aide</h4>
+                <a href="#">Centre d'aide</a>
+                <a href="#">Nous contacter</a>
+                <a href="#">FAQ</a>
+            </div>
+            
+            <!-- Section Informations légales -->
+            <div class="footer-section">
+                <h4>Informations</h4>
+                <a href="#">Mentions légales</a>
+                <a href="#">Confidentialité</a>
+                <a href="#">CGU Professionnels</a>
+            </div>
+        </div>
+        
+        <!-- Barre de copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Doctomatique. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Fichier JavaScript avec modules ES6 -->
+    <script type="module" src="../assets/js/professional.js"></script>
+</body>
+</html>

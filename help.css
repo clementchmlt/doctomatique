@@ -1,0 +1,164 @@
+/* ========================================
+   HELP.CSS - PAGE D'AIDE ET SUPPORT
+   Styles spécifiques à aide.html
+   ======================================== */
+
+/* ========== CONTENEUR GLOBAL ========== */
+.help-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ========== EN-TÊTE DE SECTION (HÉROS) ========== */
+.help-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Titre principal */
+.help-hero h1 {
+    font-size: var(--taille-police-h1);
+    margin-bottom: 1rem;
+}
+
+/* Description principale */
+.help-hero p {
+    color: var(--couleur-texte-secondaire);
+    font-size: var(--taille-police-grand);
+}
+
+/* ========== GRILLE DES CARTES D'AIDE (CATÉGORIES) ========== */
+.help-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Carte de catégorie d'aide */
+.help-card {
+    background: var(--couleur-fond-blanc);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon-bordure-grand);
+    padding: 2rem;
+    text-align: center;
+    transition: all var(--transition-normale);
+}
+
+/* Effet au survol */
+.help-card:hover {
+    box-shadow: var(--ombre-principale);
+    transform: translateY(-2px);
+}
+
+/* Icône/Image de la carte */
+.help-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+/* Titre de la carte */
+.help-card h3 {
+    font-size: var(--taille-police-h3);
+    margin-bottom: 0.8rem;
+    color: var(--couleur-principale);
+}
+
+/* Description de la carte */
+.help-card p {
+    color: var(--couleur-texte-secondaire);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Lien "En savoir plus" */
+.help-card a {
+    color: var(--couleur-principale);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ========== SECTION CONTACTEZ-NOUS ========== */
+.contact-section {
+    background: var(--couleur-principale-light);
+    border-radius: var(--rayon-bordure-grand);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Titre de la section contact */
+.contact-section h2 {
+    font-size: var(--taille-police-h2);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Formulaire de contact (limiteur de largeur) */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ========== PRÉVISUALISATION FAQ ========== */
+.faq-preview {
+    background: var(--couleur-fond-blanc);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon-bordure-grand);
+    padding: 2rem;
+}
+
+/* Titre de la section FAQ */
+.faq-preview h2 {
+    font-size: var(--taille-police-h2);
+    margin-bottom: 1.5rem;
+}
+
+/* Élément de la FAQ */
+.faq-item {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--couleur-bordure);
+}
+
+/* Dernier élément (pas de bordure en bas) */
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+/* Question de la FAQ */
+.faq-question {
+    font-weight: 600;
+    color: var(--couleur-texte-principal);
+    margin-bottom: 0.5rem;
+}
+
+/* Réponse de la FAQ */
+.faq-answer {
+    color: var(--couleur-texte-secondaire);
+    line-height: 1.6;
+}
+
+/* Lien "Voir toutes les FAQs" */
+.view-all-faq {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+/* ========== RESPONSIVE : MOBILE ========== */
+@media (max-width: 768px) {
+    /* Réduction du padding du conteneur */
+    .help-container {
+        padding: 1rem;
+    }
+
+    /* Réduction de la taille du titre */
+    .help-hero h1 {
+        font-size: 2rem;
+    }
+
+    /* Passage à une seule colonne pour la grille d'aide */
+    .help-grid {
+        grid-template-columns: 1fr;
+    }
+}

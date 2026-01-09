@@ -1,0 +1,407 @@
+<!-- === FICHIER HTML ENTIÈREMENT ANNOTÉ ET EXPLIQUÉ === -->
+<!-- Chaque section comporte des commentaires pédagogiques pour un devoir. -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité - Doctomatique</title>
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="confidentiality.css">
+</head>
+<body>
+    <!-- Section HEADER : contient le logo et la navigation principale -->
+<header>
+        <!-- Barre de navigation : liens vers sections importantes du site -->
+<nav>
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="Logo Doctomatique">
+                <span>Doctomatique</span>
+            </a>
+            
+            <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="nav-links">
+                <a href="professionnel.html">Espace Professionnel</a>
+                <a href="auth.html" class="btn-connexion">Connexion</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section MAIN : contenu principal de la page -->
+<main>
+        <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="privacy-container">
+            <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="privacy-hero">
+                <!-- Titre principal (H1) : identifie le sujet principal de la page -->
+<h1>Politique de Confidentialité</h1>
+                <!-- Paragraphe : texte descriptif -->
+<p class="date">Dernière mise à jour : 10 décembre 2025</p>
+            </div>
+
+            <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="privacy-intro">
+                <!-- Paragraphe : texte descriptif -->
+<p>
+                    <strong>Chez Doctomatique, la protection de vos données personnelles est notre priorité absolue.</strong>
+                </p>
+                <!-- Paragraphe : texte descriptif -->
+<p>
+                    Cette politique de confidentialité explique comment nous collectons, utilisons, 
+                    protégeons et partageons vos informations personnelles conformément au Règlement 
+                    Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés.
+                </p>
+            </div>
+
+            <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="privacy-content">
+                <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="privacy-section">
+                    <!-- Titre secondaire (H2) : structure les grandes parties -->
+<h2>1. Responsable du Traitement</h2>
+                    <!-- Paragraphe : texte descriptif -->
+<p>
+                        Le responsable du traitement des données est :
+                    </p>
+                    <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="highlight-box">
+                        <strong>Doctomatique</strong>
+                        Association loi 1901 à but non lucratif<br>
+                        123 Avenue de la Santé, 75015 Paris, France<br>
+                        Email : dpo@doctomatique.fr
+                    </div>
+                    <!-- Paragraphe : texte descriptif -->
+<p>
+                        Pour toute question concernant vos données personnelles, vous pouvez contacter 
+                        notre Délégué à la Protection des Données (DPO) à l'adresse : dpo@doctomatique.fr
+                    </p>
+                </div>
+
+                <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="privacy-section">
+                    <!-- Titre secondaire (H2) : structure les grandes parties -->
+<h2>2. Données Collectées</h2>
+                    <!-- Paragraphe : texte descriptif -->
+<p>
+                        Nous collectons uniquement les données nécessaires au fonctionnement de notre service :
+                    </p>
+                    
+                    <!-- Sous-titre (H3) : détail ou sous-catégorie -->
+<h3>Pour les Patients</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Type de données</th>
+                                <th>Finalité</th>
+                                <th>Base légale</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nom, prénom</td>
+                                <td>Identification et gestion du compte</td>
+                                <td>Contrat</td>
+                            </tr>
+                            <tr>
+                                <td>Email, téléphone</td>
+                                <td>Communication, rappels de RDV</td>
+                                <td>Contrat</td>
+                            </tr>
+                            <tr>
+                                <td>Date de naissance</td>
+                                <td>Vérification d'âge, adaptation du service</td>
+                                <td>Contrat</td>
+                            </tr>
+                            <tr>
+                                <td>Adresse postale</td>
+                                <td>Localisation des praticiens à proximité</td>
+                                <td>Intérêt légitime</td>
+                            </tr>
+                            <tr>
+                                <td>Historique des RDV</td>
+                                <td>Gestion des consultations</td>
+                                <td>Contrat</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Sous-titre (H3) : détail ou sous-catégorie -->
+<h3>Pour les Praticiens</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Type de données</th>
+                                <th>Finalité</th>
+                                <th>Base légale</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Identité complète, numéro RPPS/ADELI</td>
+                                <td>Vérification professionnelle</td>
+                                <td>Obligation légale</td>
+                            </tr>
+                            <tr>
+                                <td>Adresse du cabinet, coordonnées</td>
+                                <td>Mise en relation avec patients</td>
+                                <td>Contrat</td>
+                            </tr>
+                            <tr>
+                                <td>Informations bancaires</td>
+                                <td>Traitement des paiements</td>
+                                <td>Contrat</td>
+                            </tr>
+                            <tr>
+                                <td>Agenda et disponibilités</td>
+                                <td>Gestion des rendez-vous</td>
+                                <td>Contrat</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="highlight-box">
+                        <strong>Important :</strong>
+                        Nous ne collectons JAMAIS de dossiers médicaux complets. Seules les informations 
+                        nécessaires à la prise de rendez-vous sont enregistrées. Le contenu médical des 
+                        consultations reste strictement confidentiel entre le patient et son praticien.
+                    </div>
+                </div>
+
+                <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="privacy-section">
+                    <!-- Titre secondaire (H2) : structure les grandes parties -->
+<h2>3. Utilisation des Données</h2>
+                    <!-- Paragraphe : texte descriptif -->
+<p>
+                        Vos données personnelles sont utilisées pour :
+                    </p>
+                    <ul>
+                        <li>Créer et gérer votre compte utilisateur</li>
+                        <li>Faciliter la prise de rendez-vous en ligne</li>
+                        <li>Envoyer des rappels de rendez-vous par email et SMS</li>
+                        <li>Améliorer nos services et l'expérience utilisateur</li>
+                        <li>Assurer le support client</li>
+                        <li>Respecter nos obligations légales</li>
+                        <li>Produire des statistiques anonymisées</li>
+                    </ul>
+                    <!-- Paragraphe : texte descriptif -->
+<p>
+                        <strong>Nous ne vendons JAMAIS vos données personnelles à des tiers.</strong>
+                    </p>
+                </div>
+
+                <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="privacy-section">
+                    <!-- Titre secondaire (H2) : structure les grandes parties -->
+<h2>4. Partage des Données</h2>
+                    <!-- Paragraphe : texte descriptif -->
+<p>
+                        Vos données peuvent être partagées uniquement dans les cas suivants :
+                    </p>
+                    <ul>
+                        <li><strong>Avec les praticiens :</strong> Vos coordonnées sont communiquées au 
+                            praticien chez qui vous prenez rendez-vous pour qu'il puisse vous contacter 
+                            si nécessaire</li>
+                        <li><strong>Prestataires techniques :</strong> OVH (hébergement HDS), Stripe 
+                            (paiements sécurisés), Twilio (envoi de SMS)</li>
+                        <li><strong>Autorités légales :</strong> En cas de réquisition judiciaire ou 
+                            d'obligation légale</li>
+                    </ul>
+                    <!-- Paragraphe : texte descriptif -->
+<p>
+                        Tous nos prestataires sont situés dans l'Union Européenne et sont soumis au RGPD.
+                    </p>
+                </div>
+
+                <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="privacy-section">
+                    <!-- Titre secondaire (H2) : structure les grandes parties -->
+<h2>5. Sécurité des Données</h2>
+                    <!-- Paragraphe : texte descriptif -->
+<p>
+                        Nous mettons en œuvre des mesures de sécurité robustes pour protéger vos données :
+                    </p>
+                    <ul>
+                        <li><strong>Chiffrement SSL/TLS :</strong> Toutes les communications sont chiffrées</li>
+                        <li><strong>Hébergement certifié HDS :</strong> Nos serveurs sont certifiés pour 
+                            l'hébergement de données de santé</li>
+                        <li><strong>Sauvegardes quotidiennes :</strong> Vos données sont sauvegardées tous 
+                            les jours</li>
+                        <li><strong>Accès restreint :</strong> Seules les personnes autorisées peuvent 
+                            accéder aux données</li>
+                        <li><strong>Surveillance 24/7 :</strong> Nos systèmes sont surveillés en permanence</li>
+                        <li><strong>Audits de sécurité :</strong> Tests d'intrusion et audits réguliers</li>
+                    </ul>
+                </div>
+
+                <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="privacy-section">
+                    <!-- Titre secondaire (H2) : structure les grandes parties -->
+<h2>6. Conservation des Données</h2>
+                    <!-- Paragraphe : texte descriptif -->
+<p>
+                        Nous conservons vos données pendant les durées suivantes :
+                    </p>
+                    <ul>
+                        <li><strong>Comptes actifs :</strong> Tant que votre compte est actif</li>
+                        <li><strong>Après suppression du compte :</strong> 90 jours (possibilité de récupération)</li>
+                        <li><strong>Données de facturation :</strong> 10 ans (obligation légale)</li>
+                        <li><strong>Logs de connexion :</strong> 1 an maximum</li>
+                        <li><strong>Cookies :</strong> 13 mois maximum</li>
+                    </ul>
+                </div>
+
+                <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="privacy-section">
+                    <!-- Titre secondaire (H2) : structure les grandes parties -->
+<h2>7. Vos Droits</h2>
+                    <!-- Paragraphe : texte descriptif -->
+<p>
+                        Conformément au RGPD, vous disposez des droits suivants :
+                    </p>
+                    <ol>
+                        <li><strong>Droit d'accès :</strong> Obtenir une copie de vos données personnelles</li>
+                        <li><strong>Droit de rectification :</strong> Corriger vos données inexactes ou incomplètes</li>
+                        <li><strong>Droit à l'effacement :</strong> Demander la suppression de vos données</li>
+                        <li><strong>Droit à la limitation :</strong> Limiter le traitement de vos données</li>
+                        <li><strong>Droit à la portabilité :</strong> Recevoir vos données dans un format structuré</li>
+                        <li><strong>Droit d'opposition :</strong> Vous opposer au traitement de vos données</li>
+                        <li><strong>Droit de retirer votre consentement :</strong> À tout moment</li>
+                    </ol>
+
+                    <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="highlight-box">
+                        <strong>Pour exercer vos droits :</strong>
+                        Envoyez un email à dpo@doctomatique.fr avec une copie de votre pièce d'identité. 
+                        Nous vous répondrons sous 30 jours maximum.
+                    </div>
+
+                    <!-- Paragraphe : texte descriptif -->
+<p>
+                        Vous avez également le droit d'introduire une réclamation auprès de la CNIL 
+                        (Commission Nationale de l'Informatique et des Libertés) : www.cnil.fr
+                    </p>
+                </div>
+
+                <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="privacy-section">
+                    <!-- Titre secondaire (H2) : structure les grandes parties -->
+<h2>8. Cookies</h2>
+                    <!-- Paragraphe : texte descriptif -->
+<p>
+                        Nous utilisons des cookies pour :
+                    </p>
+                    <ul>
+                        <li><strong>Cookies essentiels :</strong> Nécessaires au fonctionnement du site 
+                            (session, sécurité)</li>
+                        <li><strong>Cookies analytiques :</strong> Statistiques d'utilisation anonymisées 
+                            (avec votre consentement)</li>
+                    </ul>
+                    <!-- Paragraphe : texte descriptif -->
+<p>
+                        Vous pouvez gérer vos préférences de cookies à tout moment via les paramètres de 
+                        votre navigateur.
+                    </p>
+                </div>
+
+                <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="privacy-section">
+                    <!-- Titre secondaire (H2) : structure les grandes parties -->
+<h2>9. Transferts Internationaux</h2>
+                    <!-- Paragraphe : texte descriptif -->
+<p>
+                        <strong>Aucune donnée n'est transférée hors de l'Union Européenne.</strong> 
+                        Tous nos serveurs et prestataires sont situés en France ou dans l'UE.
+                    </p>
+                </div>
+
+                <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="privacy-section">
+                    <!-- Titre secondaire (H2) : structure les grandes parties -->
+<h2>10. Mineurs</h2>
+                    <!-- Paragraphe : texte descriptif -->
+<p>
+                        Notre service est accessible aux mineurs avec le consentement de leurs représentants 
+                        légaux. Les parents ou tuteurs peuvent exercer les droits RGPD au nom de leurs enfants 
+                        mineurs.
+                    </p>
+                </div>
+
+                <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="privacy-section">
+                    <!-- Titre secondaire (H2) : structure les grandes parties -->
+<h2>11. Modifications</h2>
+                    <!-- Paragraphe : texte descriptif -->
+<p>
+                        Nous nous réservons le droit de modifier cette politique de confidentialité. 
+                        Toute modification substantielle vous sera notifiée par email 30 jours avant son 
+                        entrée en vigueur.
+                    </p>
+                </div>
+
+                <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="privacy-section">
+                    <!-- Titre secondaire (H2) : structure les grandes parties -->
+<h2>12. Contact</h2>
+                    <!-- Paragraphe : texte descriptif -->
+<p>
+                        Pour toute question concernant cette politique de confidentialité :
+                    </p>
+                    <ul>
+                        <li>Email : dpo@doctomatique.fr</li>
+                        <li>Courrier : Doctomatique - DPO, 123 Avenue de la Santé, 75015 Paris</li>
+                        <li>Téléphone : +33 (0)1 23 45 67 89</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Section FOOTER : informations secondaires, liens utiles -->
+<footer>
+        <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="footer-content">
+            <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="footer-section">
+                <!-- Sous-titre (H3) : détail ou sous-catégorie -->
+<h3>Doctomatique</h3>
+                <!-- Paragraphe : texte descriptif -->
+<p>La plateforme de santé qui simplifie votre quotidien</p>
+            </div>
+            
+            <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="footer-section">
+                <h4>Patients</h4>
+                <a href="recherche.html">Trouver un praticien</a>
+                <a href="aide.html">Aide et contact</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            
+            <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="footer-section">
+                <h4>Professionnels</h4>
+                <a href="professionnel.html">Espace Pro</a>
+                <a href="solutions.html">Nos solutions</a>
+                <a href="tarifs.html">Tarifs</a>
+            </div>
+            
+            <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="footer-section">
+                <h4>Informations</h4>
+                <a href="a-propos.html">À propos</a>
+                <a href="mentions-legales.html">Mentions légales</a>
+                <a href="confidentialite.html">Confidentialité</a>
+            </div>
+        </div>
+        
+        <!-- Bloc DIV : conteneur logique pour structurer le contenu -->
+<div class="footer-bottom">
+            <!-- Paragraphe : texte descriptif -->
+<p>&copy; 2025 Doctomatique. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats de recherche - Doctomatique</title>
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/search.css">
+</head>
+<body>
+
+    <!-- ========== EN-TÊTÉ DE LA PAGE ========== -->
+    <header>
+        <nav>
+            <!-- Logo principal avec lien vers l'accueil -->
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="Logo Doctomatique">
+                <span>Doctomatique</span>
+            </a>
+            
+            <!-- Navigation principale -->
+            <div class="nav-links">
+                <!-- Lien vers l'espace professionnel -->
+                <a href="professional.html">Espace professionnel</a>
+                
+                <!-- Bouton de connexion -->
+                <a href="auth.html" class="btn-connexion">Connexion</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========== CONTENU PRINCIPAL ========== -->
+    <main>
+        <div class="search-container">
+            <!-- ========== BARRE DE RECHERCHE COMPACTE ========== -->
+            <div class="compact-search">
+                <div class="input-wrapper">
+                    <img src="../assets/images/icone-practicien.png" alt="Icône praticien" class="input-icon">
+                    <input 
+                        type="text" 
+                        id="searchPraticien" 
+                        placeholder="Médecin, spécialité..."
+                    >
+                </div>
+                
+                <div class="input-wrapper">
+                    <img src="../assets/images/icone-localisation.png" alt="Icône localisation" class="input-icon">
+                    <input 
+                        type="text" 
+                        id="searchLocalisation" 
+                        placeholder="Ville, code postal..."
+                    >
+                </div>
+                
+                <button class="btn-search" id="btnSearchResults">
+                    <img src="../assets/images/icone-recherche.png" alt="Icône recherche">
+                    Rechercher
+                </button>
+            </div>
+
+            <!-- ========== EN-TÊTE DES RÉSULTATS ========== -->
+            <div class="results-header">
+                <div id="resultsCount" class="results-count">
+                    Chargement...
+                </div>
+                
+                <div class="results-sort">
+                    <label for="sortSelect">Trier par :</label>
+                    <select id="sortSelect">
+                        <option value="pertinence">Pertinence</option>
+                        <option value="distance">Distance</option>
+                        <option value="disponibilite">Disponibilité</option>
+                        <option value="avis">Meilleurs avis</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- ========== LAYOUT PRINCIPAL (FILTRES + RÉSULTATS) ========== -->
+            <div class="main-content">
+                <!-- ========== PANNEAU DE FILTRES ========== -->
+                <aside class="filters-panel">
+                    <div class="filters-header">
+                        <h3>Filtres</h3>
+                        <button id="btnResetFilters" class="btn-reset-filters">
+                            Réinitialiser
+                        </button>
+                    </div>
+
+                    <!-- Filtre : Spécialité -->
+                    <div class="filter-group">
+                        <h4>Spécialité</h4>
+                        <div id="filterSpecialites" class="filter-options">
+                            <!-- Généré dynamiquement par JS -->
+                        </div>
+                    </div>
+
+                    <!-- Filtre : Ville -->
+                    <div class="filter-group">
+                        <h4>Ville</h4>
+                        <div id="filterVilles" class="filter-options">
+                            <!-- Généré dynamiquement par JS -->
+                        </div>
+                    </div>
+
+                    <!-- Filtre : Disponibilité -->
+                    <div class="filter-group">
+                        <h4>Disponibilité</h4>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="radio" id="dispo-tous" name="disponibilite" value="tous" checked>
+                                <label for="dispo-tous">Tous</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" id="dispo-disponible" name="disponibilite" value="disponible">
+                                <label for="dispo-disponible">Disponible maintenant</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filtre : Note minimale -->
+                    <div class="filter-group">
+                        <h4>Note minimale</h4>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="radio" id="note-tous" name="note" value="0" checked>
+                                <label for="note-tous">Tous les avis</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" id="note-4" name="note" value="4">
+                                <label for="note-4">4★ et plus</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" id="note-45" name="note" value="4.5">
+                                <label for="note-45">4.5★ et plus</label>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- ========== LISTE DES RÉSULTATS ========== -->
+                <section>
+                    <div id="resultsList" class="results-list">
+                        <!-- Généré dynamiquement par JS -->
+                    </div>
+
+                    <!-- ========== PAGINATION ========== -->
+                    <div id="pagination" class="pagination">
+                        <!-- Généré dynamiquement par JS -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== BOUTON MOBILE POUR LES FILTRES ========== -->
+    <button class="mobile-filters-btn" id="btnMobileFilters">
+        🔍 Filtres
+    </button>
+
+    <!-- Overlay pour fermer les filtres sur mobile -->
+    <div class="filters-overlay" id="filtersOverlay"></div>
+
+    <!-- ========== PIED DE PAGE ========== -->
+    <footer>
+        <div class="footer-content">
+            <!-- Section À propos -->
+            <div class="footer-section">
+                <h3>Doctomatique</h3>
+                <p>La plateforme de santé qui simplifie votre quotidien</p>
+            </div>
+            
+            <!-- Section Patients -->
+            <div class="footer-section">
+                <h4>Patients</h4>
+                <a href="search.html">Trouver un praticien</a>
+                <a href="help.html">Aide et contact</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            
+            <!-- Section Professionnels -->
+            <div class="footer-section">
+                <h4>Professionnels</h4>
+                <a href="professional.html">Espace professionnel</a>
+                <a href="solutions.html">Nos solutions</a>
+                <a href="prices.html">Tarifs</a>
+            </div>
+            
+            <!-- Section Informations légales -->
+            <div class="footer-section">
+                <h4>Informations</h4>
+                <a href="about.html">À propos</a>
+                <a href="legal-mentions.html">Mentions légales</a>
+                <a href="confidentiality.html">Confidentialité</a>
+            </div>
+        </div>
+        
+        <!-- Barre de copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Doctomatique. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Fichier JavaScript avec modules ES6 -->
+    <script type="module" src="../assets/js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion / Inscription - Doctomatique</title>
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+</head>
+<body>
+
+    <!-- ========== EN-TÊTE DE LA PAGE ========== -->
+    <header>
+        <nav>
+            <!-- Logo principal avec lien vers l'accueil -->
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="Logo Doctomatique">
+                <span>Doctomatique</span>
+            </a>
+            
+            <!-- Navigation principale -->
+            <div class="nav-links">
+                <!-- Lien vers l'espace professionnel -->
+                <a href="professional.html">Espace professionnel</a>
+                
+                <!-- Bouton retour à l'accueil -->
+                <a href="../index.html" class="btn-retour">Retour</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========== CONTENU PRINCIPAL ========== -->
+    <main>
+        <div class="container">
+            <!-- ========== CONTENEUR DES FORMULAIRES ========== -->
+            <div class="auth-box">
+                
+                <!-- ========== ONGLETS DE NAVIGATION ========== -->
+                <div class="tabs">
+                    <!-- Onglet Connexion (actif par défaut) -->
+                    <button class="tab-btn active" onclick="afficherFormulaire('connexion')">
+                        Connexion
+                    </button>
+                    
+                    <!-- Onglet Inscription -->
+                    <button class="tab-btn" onclick="afficherFormulaire('inscription')">
+                        Inscription
+                    </button>
+                </div>
+
+                <!-- ========== FORMULAIRE DE CONNEXION ========== -->
+                <form id="formConnexion" class="auth-form active">
+                    <h2>Bienvenue !</h2>
+                    <p class="form-subtitle">Connectez-vous pour accéder à votre espace patient</p>
+
+                    <!-- Champ Email -->
+                    <div class="form-group">
+                        <label for="emailConnexion">Adresse email</label>
+                        <div class="input-with-icon">
+                            <img src="../assets/images/icone-email.png" alt="Icône email" class="input-icon">
+                            <input 
+                                type="email" 
+                                id="emailConnexion" 
+                                placeholder="votre@email.com"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Champ Mot de passe -->
+                    <div class="form-group">
+                        <label for="motdepasseConnexion">Mot de passe</label>
+                        <div class="input-with-icon">
+                            <img src="../assets/images/icone-password.png" alt="Icône mot de passe" class="input-icon">
+                            <input 
+                                type="password" 
+                                id="motdepasseConnexion" 
+                                placeholder="••••••••"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Lien mot de passe oublié -->
+                    <div class="form-footer">
+                        <a href="reset-password.html" class="link-secondary">Mot de passe oublié ?</a>
+                    </div>
+
+                    <!-- Bouton de soumission -->
+                    <button type="submit" class="btn-submit">
+                        Se connecter
+                    </button>
+
+                    <!-- Séparateur -->
+                    <div class="separator-text">
+                        <span>ou</span>
+                    </div>
+
+                    <!-- Connexion avec Google -->
+                    <button type="button" class="btn-social" onclick="connexionGoogle()">
+                        <img src="../assets/images/icone-google.png" alt="Google">
+                        Continuer avec Google
+                    </button>
+                </form>
+
+                <!-- ========== FORMULAIRE D'INSCRIPTION ========== -->
+                <form id="formInscription" class="auth-form">
+                    <h2>Créer un compte</h2>
+                    <p class="form-subtitle">Rejoignez Doctomatique et prenez soin de votre santé</p>
+
+                    <!-- Nom complet -->
+                    <div class="form-group">
+                        <label for="nomComplet">Nom complet</label>
+                        <div class="input-with-icon">
+                            <img src="../assets/images/icone-personne.png" alt="Icône utilisateur" class="input-icon">
+                            <input 
+                                type="text" 
+                                id="nomComplet" 
+                                placeholder="Prénom Nom"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Champ Email -->
+                    <div class="form-group">
+                        <label for="emailInscription">Adresse email</label>
+                        <div class="input-with-icon">
+                            <img src="../assets/images/icone-email.png" alt="Icône email" class="input-icon">
+                            <input 
+                                type="email" 
+                                id="emailInscription" 
+                                placeholder="votre@email.com"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Champ Mot de passe -->
+                    <div class="form-group">
+                        <label for="motdepasseInscription">Mot de passe</label>
+                        <div class="input-with-icon">
+                            <img src="../assets/images/icone-password.png" alt="Icône mot de passe" class="input-icon">
+                            <input 
+                                type="password" 
+                                id="motdepasseInscription" 
+                                placeholder="••••••••"
+                                required
+                            >
+                        </div>
+                        <small class="input-hint">Minimum 8 caractères</small>
+                    </div>
+
+                    <!-- Confirmation mot de passe -->
+                    <div class="form-group">
+                        <label for="confirmationMotdepasse">Confirmer le mot de passe</label>
+                        <div class="input-with-icon">
+                            <img src="../assets/images/icone-password.png" alt="Icône mot de passe" class="input-icon">
+                            <input 
+                                type="password" 
+                                id="confirmationMotdepasse" 
+                                placeholder="••••••••"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Case à cocher CGU -->
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="accepterCGU" required>
+                            <span>J'accepte les <a href="cgu.html" target="_blank">Conditions Générales d'Utilisation</a> et la <a href="confidentialite.html" target="_blank">Politique de Confidentialité</a></span>
+                        </label>
+                    </div>
+
+                    <!-- Bouton de soumission -->
+                    <button type="submit" class="btn-submit">
+                        Créer mon compte
+                    </button>
+
+                    <!-- Séparateur -->
+                    <div class="separator-text">
+                        <span>ou</span>
+                    </div>
+
+                    <!-- Inscription avec Google -->
+                    <button type="button" class="btn-social" onclick="connexionGoogle()">
+                        <img src="../assets/images/icone-google.png" alt="Google">
+                        S'inscrire avec Google
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== PIED DE PAGE ========== -->
+    <footer>
+        <div class="footer-content">
+            <!-- Section À propos -->
+            <div class="footer-section">
+                <h3>Doctomatique</h3>
+                <p>La plateforme de santé qui simplifie votre quotidien</p>
+            </div>
+            
+            <!-- Section Patients -->
+            <div class="footer-section">
+                <h4>Patients</h4>
+                <a href="search.html">Trouver un praticien</a>
+                <a href="help.html">Aide et contact</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            
+            <!-- Section Professionnels -->
+            <div class="footer-section">
+                <h4>Professionnels</h4>
+                <a href="professional.html">Espace professionnel</a>
+                <a href="solutions.html">Nos solutions</a>
+                <a href="prices.html">Tarifs</a>
+            </div>
+            
+            <!-- Section Informations légales -->
+            <div class="footer-section">
+                <h4>Informations</h4>
+                <a href="about.html">À propos</a>
+                <a href="legal-mentions.html">Mentions légales</a>
+                <a href="confidentiality.html">Confidentialité</a>
+            </div>
+        </div>
+        
+        <!-- Barre de copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Doctomatique. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Fichier JavaScript avec modules ES6 -->
+    <script type="module" src="../assets/js/auth.js"></script>
+</body>
+</html>

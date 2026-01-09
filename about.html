@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aide et Contact - Doctomatique</title>
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/help.css">
+</head>
+<body>
+
+    <!-- ========== EN-TÊTE DE LA PAGE ========== -->
+    <header>
+        <nav>
+            <!-- Logo principal avec lien vers l'accueil -->
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="Logo Doctomatique">
+                <span>Doctomatique</span>
+            </a>
+
+            <!-- Navigation principale -->
+            <div class="nav-links">
+                <a href="professional.html">Espace professionnel</a>
+                <a href="auth.html" class="btn-connexion">Connexion</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========== CONTENU PRINCIPAL ========== -->
+    <main>
+        <div class="help-container">
+
+            <!-- Section d'introduction / Hero -->
+            <div class="help-hero">
+                <h1>Comment pouvons-nous vous aider ?</h1>
+                <p>Notre équipe est là pour répondre à toutes vos questions</p>
+            </div>
+
+            <!-- Grille des options de contact -->
+            <div class="help-grid">
+                <!-- Carte Email -->
+                <div class="help-card">
+                    <img src="../assets/images/icone-email.png" alt="Email">
+                    <h3>Email</h3>
+                    <p>Envoyez-nous un message, nous vous répondrons sous 24h</p>
+                    <a href="mailto:contact@doctomatique.fr">contact@doctomatique.fr</a>
+                </div>
+
+                <!-- Carte FAQ -->
+                <div class="help-card">
+                    <img src="../assets/images/icone-practicien.png" alt="FAQ">
+                    <h3>FAQ</h3>
+                    <p>Consultez notre base de connaissances pour trouver des réponses rapides</p>
+                    <a href="faq.html">Voir la FAQ →</a>
+                </div>
+
+                <!-- Carte Guides -->
+                <div class="help-card">
+                    <img src="../assets/images/icone-check.png" alt="Guide">
+                    <h3>Guides</h3>
+                    <p>Découvrez comment utiliser au mieux notre plateforme</p>
+                    <a href="#guides">Voir les guides →</a>
+                </div>
+            </div>
+
+            <!-- Section formulaire de contact -->
+            <div class="contact-section">
+                <h2>Envoyez-nous un message</h2>
+
+                <form class="contact-form">
+                    <!-- Champ Nom -->
+                    <div class="form-group">
+                        <label for="nom">Nom complet</label>
+                        <div class="input-with-icon">
+                            <img src="../assets/images/icone-personne.png" alt="Nom" class="input-icon">
+                            <input type="text" id="nom" placeholder="Prénom Nom" required>
+                        </div>
+                    </div>
+
+                    <!-- Champ Email -->
+                    <div class="form-group">
+                        <label for="email">Adresse email</label>
+                        <div class="input-with-icon">
+                            <img src="../assets/images/icone-email.png" alt="Email" class="input-icon">
+                            <input type="email" id="email" placeholder="votre@email.com" required>
+                        </div>
+                    </div>
+
+                    <!-- Champ Sujet -->
+                    <div class="form-group">
+                        <label for="sujet">Sujet</label>
+                        <div class="input-with-icon">
+                            <img src="../assets/images/icone-practicien.png" alt="Sujet" class="input-icon">
+                            <input type="text" id="sujet" placeholder="Objet de votre demande" required>
+                        </div>
+                    </div>
+
+                    <!-- Champ Message -->
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="6" placeholder="Décrivez votre demande en détail..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Envoyer le message</button>
+                </form>
+            </div>
+
+            <!-- Aperçu FAQ -->
+            <div class="faq-preview">
+                <h2>Questions fréquentes</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">Comment prendre rendez-vous ?</div>
+                    <div class="faq-answer">
+                        Utilisez la barre de recherche sur la page d'accueil pour trouver un praticien près de chez vous, puis sélectionnez un créneau disponible.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Puis-je annuler mon rendez-vous ?</div>
+                    <div class="faq-answer">
+                        Oui, vous pouvez annuler votre rendez-vous jusqu'à 24h avant la consultation depuis votre espace patient.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Est-ce que Doctomatique est gratuit ?</div>
+                    <div class="faq-answer">
+                        Oui, la prise de rendez-vous est entièrement gratuite pour les patients. Nous facturons uniquement les praticiens pour couvrir nos frais d'hébergement.
+                    </div>
+                </div>
+
+                <div class="view-all-faq">
+                    <a href="faq.html" class="btn-secondary">Voir toutes les questions</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ========== PIED DE PAGE ========== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Doctomatique</h3>
+                <p>La plateforme de santé qui simplifie votre quotidien</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Patients</h4>
+                <a href="search.html">Trouver un praticien</a>
+                <a href="help.html">Aide et contact</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Professionnels</h4>
+                <a href="professional.html">Espace professionnel</a>
+                <a href="solutions.html">Nos solutions</a>
+                <a href="prices.html">Tarifs</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Informations</h4>
+                <a href="about.html">À propos</a>
+                <a href="legal-mentions.html">Mentions légales</a>
+                <a href="confidentiality.html">Confidentialité</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Doctomatique. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
